@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>QR Code Generator</title>
+		
+		<!--- LOAD FILES --->
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css" media="screen">
+        <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="font-awesome/css/font-awesome-animation.min.css">
+		
+		<script src='jquery.min.js'></script>
+		<script src='qrcode/jquery-qrcode-0.14.0.min.js'></script>
+        <!--<script src="bootstrap/js/bootstrap.min.js"></script>-->
+		<script src='main.js'></script>
+	</head>
+	
+	<body>
+		<div class="container-fluid">
+			<div class="row" style="margin-top:10px">
+				<div class="col-sm-12">
+					<div class='col-sm-4'></div>
+					
+					<div class='col-sm-4'>
+						<div class="panel panel-primary">
+							<div class="panel-heading">QR Code Generator</div>
+							<div class="panel-body text-center">
+								<div class='form-group-sm'>
+									<form>
+										<label class='control-label'>Enter Text To Encode: </label>
+										<input type='text' id="textToEncode" class="form-control">
+										<span id='codeMsg' class='help-block'></span>
+										<button class='btn btn-primary' id="genCode">Generate QR Code</button>
+									</form>
+								</div>
+								
+								<br>
+								
+								<div id='code'></div>
+								
+								<br>
+								
+								<div id='encodedText'></div>
+							</div>
+							
+							<div class="panel-footer text-center hidden" id='barcodeDiv'>
+								<a id='downloadBarcode' download='Barcode.png'>
+									<button class='btn btn-sm btn-primary'>Download Image</button>
+								</a>
+							</div>
+						</div>
+					</div>
+					
+					<div class='col-sm-4'></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
